@@ -1,8 +1,8 @@
-AC_PREREQ(2.61)
-AC_INIT(c-template, 0.1, info@example.com)
-AM_INIT_AUTOMAKE(c-template, 0.1)
+AC_PREREQ([2.69])
+AC_INIT([finch], [0.1], [info@example.com])
+AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([src/main.c])
-AC_CONFIG_HEADER([config.h])
+AC_CONFIG_HEADERS([config.h])
 
 # Checks for programs.
 AC_PROG_CC
@@ -15,4 +15,6 @@ AC_PROG_CC
 
 # Checks for library functions.
 
-AC_OUTPUT(Makefile src/Makefile)
+AC_CONFIG_FILES([Makefile
+                 src/Makefile])
+AC_OUTPUT
