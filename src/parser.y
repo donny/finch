@@ -2,6 +2,7 @@
 
 %{
 #  include <stdio.h>
+#include "finchcommon.h"
 %}
 
 /* declare tokens */
@@ -37,6 +38,7 @@ main()
 {
   printf("> ");
   yyparse();
+  print_color("DONE");
 }
 
 yyerror(char *s)

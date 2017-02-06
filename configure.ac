@@ -8,6 +8,7 @@ AC_CONFIG_HEADERS([config.h])
 AC_PROG_CC
 AC_PROG_LEX
 AC_PROG_YACC
+AC_PROG_RANLIB
 
 # Checks for libraries.
 
@@ -18,5 +19,6 @@ AC_PROG_YACC
 # Checks for library functions.
 
 AC_CONFIG_FILES([Makefile
+                 common/Makefile
                  src/Makefile])
 AC_OUTPUT

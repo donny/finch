@@ -3,4 +3,5 @@ AM_YFLAGS = -d
 
 bin_PROGRAMS = calc
 calc_SOURCES = parser.y scanner.l
-calc_LDADD = @LEXLIB@
+calc_CPPFLAGS = -I$(top_srcdir)/common
+calc_LDADD = @LEXLIB@ ../common/libfinchcommon.a
