@@ -1,7 +1,7 @@
 AC_PREREQ([2.69])
 AC_INIT([finch], [0.1], [info@example.com])
 AM_INIT_AUTOMAKE
-AC_CONFIG_SRCDIR([src/main.c])
+AC_CONFIG_SRCDIR([src/parser.y])
 AC_CONFIG_HEADERS([config.h])
 
 # Checks for programs.
