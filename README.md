@@ -35,7 +35,7 @@ Notes:
 1. We use `AUTOMAKE_OPTIONS = foreign` so that we don't need to generate unnecessary files as required by the GNU coding standards (e.g. `NEWS` or `AUTHORS`).
 2. We run `autoscan` to produce `configure.scan`.
 3. We need to edit `configure.scan` and add the line `AM_INIT_AUTOMAKE` to initialise Automake. Yes, it's annoying and we should not have to.
-4. We run `autoreconf -iv` (verbose and copy missing auxiliary files) to generate the `configure` script. The `autoreconf` program executes the configuration tools in the Autoconf and Automake packages as required by each project.
+4. We run `autoreconf -vi` (verbose and copy missing auxiliary files) to generate the `configure` script. The `autoreconf` program executes the configuration tools in the Autoconf and Automake packages as required by each project.
 5. We run `./configure` to generate the actual `Makefile`.
 6. We run `make` to build the source code.
 7. The *pipeline* looks something like:
