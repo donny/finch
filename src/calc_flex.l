@@ -7,7 +7,7 @@ cc -o $@ calc.tab.c lex.yy.c -lfl
 */
 
 %{
-# include "fb1-5.tab.h"
+# include "calc_bison.h"
 %}
 
 %%
