@@ -22,6 +22,8 @@ The Autotools were designed to create portable configuration scripts and makefil
 
 The [asciinema](https://asciinema.org) recording below shows a minimal `Makefile.am`:
 
+A minimal `Makefile.am` is shown below followed by an [asciinema](https://asciinema.org) recording that shows how to use the build tools.
+
 ```
 AUTOMAKE_OPTIONS = foreign
 bin_PROGRAMS = main
