@@ -20,8 +20,6 @@ $ make install
 
 The Autotools were designed to create portable configuration scripts and makefiles that work correctly on a user's system whether it's Linux, macOS, or BSD system. Most developers understand the purpose of a build tool such as `make` but what's the purpose of `configure`? Although we have standards such as [POSIX](https://en.wikipedia.org/wiki/POSIX), sometimes operating systems behave differently because of the underlying implementation and APIs. The purpose of `configure` is to find out these differences and set the appropriate flags or `#define` so that the code that makes use of these `#define` can work correctly.
 
-The [asciinema](https://asciinema.org) recording below shows a minimal `Makefile.am`:
-
 A minimal `Makefile.am` is shown below followed by an [asciinema](https://asciinema.org) recording that shows how to use the build tools.
 
 ```
