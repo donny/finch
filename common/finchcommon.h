@@ -1,6 +1,6 @@
-#ifndef FINCHCOMMON_H
-#define FINCHCOMMON_H
+#ifndef FINCHCOMMON_H_INCLUDED
+#define FINCHCOMMON_H_INCLUDED
 
 void * print_color(void * data);
 
-#endif
+#endif /* FINCHCOMMON_H_INCLUDED */

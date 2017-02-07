@@ -9,5 +9,4 @@
 void * print_color(void * data)
 {
   printf("Hello from %s!\n", (const char *)data);
-  return 0;
 }
