@@ -1,3 +1,2 @@
-noinst_LIBRARIES = libfinchcommon.a
-libfinchcommon_a_SOURCES = finchcommon.h print.c
-
+noinst_LTLIBRARIES = libfinchcommon.la
+libfinchcommon_la_SOURCES = finchcommon.h print.c
