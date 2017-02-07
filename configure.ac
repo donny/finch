@@ -1,6 +1,9 @@
 AC_PREREQ([2.69])
 AC_INIT([finch], [0.1], [info@example.com])
 AM_INIT_AUTOMAKE
+LT_PREREQ([2.4])
+LT_INIT([dlopen])
+
 AC_CONFIG_SRCDIR([src/parser.y])
 AC_CONFIG_HEADERS([config.h])
 
@@ -8,7 +11,7 @@ AC_CONFIG_HEADERS([config.h])
 AC_PROG_CC
 AC_PROG_LEX
 AC_PROG_YACC
-AC_PROG_RANLIB
+# AC_PROG_RANLIB
 
 # Checks for libraries.
 
@@ -20,5 +23,7 @@ AC_PROG_RANLIB
 
 AC_CONFIG_FILES([Makefile
                  common/Makefile
+                 include/Makefile
+                 libfinch/Makefile
                  src/Makefile])
 AC_OUTPUT
