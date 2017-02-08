@@ -1,5 +1,6 @@
 /* The code is taken from the book `flex & bison` by John Levine. */
 
+%option nounput noinput
 %{
 #include "parser.h"
 
@@ -20,6 +21,6 @@ void yyerror(char *s, ...);
 \n      { return EOL; }
 "//".*
 [ \t]   { /* Ignore white space. */ }
-.       { yyerror("Mystery character %c\n", *yytext); }
+.       { yyerror("Unknown character %c\n", *yytext); }
 
 %%

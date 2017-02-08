@@ -2,9 +2,10 @@
 
 %{
 #include <stdio.h>
+#include <stdarg.h>
 #include <libfinch.h>
 
-void yyerror(char *s);
+void yyerror(char *s, ...);
 int yylex();
 %}
 
@@ -47,7 +48,11 @@ int main()
   return 0;
 }
 
-void yyerror(char *s)
+void yyerror(char *s, ...)
 {
-  fprintf(stderr, "error: %s\n", s);
+  va_list ap;
+  va_start(ap, s);
+  fprintf(stderr, "Error: ");
+  vfprintf(stderr, s, ap);
+  va_end(ap);
 }
