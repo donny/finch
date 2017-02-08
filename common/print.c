@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-void * print_color(void * data)
+void print_color(void * data)
 {
   printf("Hello from %s!\n", (const char *)data);
 }
