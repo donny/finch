@@ -23,7 +23,7 @@ calclist: /* Nothing. */
  ;
 
 exp: factor
- | exp ADD exp { $$ = $1 + $3; }
+ | exp ADD factor { $$ = $1 + $3; }
  | exp SUB factor { $$ = $1 - $3; }
  | exp ABS factor { $$ = $1 | $3; }
  ;
