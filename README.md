@@ -48,6 +48,8 @@ Notes:
 
 ...
 
+[![asciicast](https://asciinema.org/a/eyrmftempszz5ad9n721kde4r.png)](https://asciinema.org/a/eyrmftempszz5ad9n721kde4r)
+
 ### Implementation
 
 The project is composed of three main parts:
