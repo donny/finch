@@ -5,5 +5,5 @@
 void finch_print_color(void * data)
 {
   printf("FINCH: ");
-  print_color(data);
+  print_color(BLUE, data);
 }
