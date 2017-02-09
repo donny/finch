@@ -18,8 +18,14 @@ int yylex();
 %%
 
 calclist: /* Nothing. */
- | calclist exp EOL { printf("= %d\n> ", $2); }
- | calclist EOL { printf("> "); } /* Blank line or a comment. */
+ | calclist exp EOL {
+                      finch_print_color(GREEN, "= ");
+                      printf("%d\n", $2);
+                      finch_print_color(MAGENTA, "> ");
+                    }
+ | calclist EOL { /* Blank line or a comment. */
+                  finch_print_color(MAGENTA, "> ");
+                }
  ;
 
 exp: factor
@@ -42,9 +48,10 @@ term: NUMBER
 
 int main()
 {
-  printf("> ");
+  finch_print_color(BLUE, "Finch 0.0.1\n");
+  finch_print_color(MAGENTA, "> ");
   yyparse();
-  finch_print_color(RED, "DONE");
+  finch_print_color(BLUE, "Exiting Finch...\n");
   return 0;
 }
 
@@ -52,7 +59,7 @@ void yyerror(char *s, ...)
 {
   va_list ap;
   va_start(ap, s);
-  fprintf(stderr, "Error: ");
-  vfprintf(stderr, s, ap);
+  finch_print_color(RED, "Error: ");
+  vprintf(s, ap);
   va_end(ap);
 }
