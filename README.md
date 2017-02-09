@@ -20,15 +20,13 @@ $ make install
 
 The Autotools were designed to create portable configuration scripts and makefiles that work correctly on a user's system whether it's Linux, macOS, or BSD system. Most developers understand the purpose of a build tool such as `make` but what's the purpose of `configure`? Although we have standards such as [POSIX](https://en.wikipedia.org/wiki/POSIX), sometimes operating systems behave differently because of the underlying implementation and APIs. The purpose of `configure` is to find out these differences and set the appropriate flags or `#define` so that the code that makes use of these `#define` can work correctly.
 
-A minimal `Makefile.am` is shown below followed by an [asciinema](https://asciinema.org) recording that shows how to use the build tools.
+A minimal `Makefile.am` is shown below with an [asciinema recording](https://asciinema.org/a/8tsea18bfgq5j93iiazcn5a82) that shows how to use the build tools.
 
 ```
 AUTOMAKE_OPTIONS = foreign
 bin_PROGRAMS = main
 main_SOURCES = main.c
 ```
-
-[![asciicast](https://asciinema.org/a/8tsea18bfgq5j93iiazcn5a82.png)](https://asciinema.org/a/8tsea18bfgq5j93iiazcn5a82)
 
 Notes:
 
@@ -55,11 +53,7 @@ $ make
 $ make install
 ```
 
-A recording that shows how to use the tools to build the project and run the program:
-
-[![asciicast](https://asciinema.org/a/eyrmftempszz5ad9n721kde4r.png)](https://asciinema.org/a/eyrmftempszz5ad9n721kde4r)
-
-The screenshot of the app:
+The screenshot of the app is shown below with an [asciinema recording](https://asciinema.org/a/eyrmftempszz5ad9n721kde4r) that shows how to use the tools to build the project and run the program.
 
 ![Screenshot](https://raw.githubusercontent.com/donny/finch/master/screenshot.png)
 
