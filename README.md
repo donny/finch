@@ -1,6 +1,6 @@
 # finch
 
-Finch is a simple CLI calculator.
+Finch is a simple CLI calculator using a small ANSI color printing library built using [Autoconf](https://www.gnu.org/software/autoconf/autoconf.html), [Automake](https://www.gnu.org/software/automake/), and [Libtool](https://www.gnu.org/software/libtool/).
 
 ### Background
 
@@ -52,9 +52,9 @@ Notes:
 
 The project is composed of three main parts:
 
-- A `convenience library` which is a static library that's only used within the containing project in [`common`](https://github.com/donny/finch/blob/master/common).
+- A `convenience library` which is a static library that's only used within the containing project for printing [ANSI color codes](http://pueblo.sourceforge.net/doc/manual/ansi_color_codes.html), in [`common`](https://github.com/donny/finch/blob/master/common).
 - A public shared library built using the static convenience library in [`libfinch`](https://github.com/donny/finch/blob/master/libfinch) with the public header file in [`include`](https://github.com/donny/finch/blob/master/include).
-- A calculator program that is built using [Flex](https://en.wikipedia.org/wiki/Flex_(lexical_analyser_generator)) and [Bison](https://en.wikipedia.org/wiki/GNU_bison) code from the book [flex & bison](http://shop.oreilly.com/product/9780596155988.do) by John Levine.
+- A calculator program that is built using [Flex](https://en.wikipedia.org/wiki/Flex_(lexical_analyser_generator)) and [Bison](https://en.wikipedia.org/wiki/GNU_bison) code from the book [flex & bison](http://shop.oreilly.com/product/9780596155988.do) by John Levine in [`src`](https://github.com/donny/finch/blob/master/src).
 
 The main [`configure.ac`](https://github.com/donny/finch/blob/master/configure.ac):
 
