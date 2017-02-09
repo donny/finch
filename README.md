@@ -50,7 +50,52 @@ Notes:
 
 ### Implementation
 
-...
+The project is composed of three main parts:
+
+- A `convenience library` which is a static library that's only used within the containing project in [`common`](https://github.com/donny/finch/blob/master/common).
+- A public shared library built using the static convenience library in [`libfinch`](https://github.com/donny/finch/blob/master/libfinch) with the public header file in [`include`](https://github.com/donny/finch/blob/master/include).
+- A calculator program that is built using [Flex](https://en.wikipedia.org/wiki/Flex_(lexical_analyser_generator)) and [Bison](https://en.wikipedia.org/wiki/GNU_bison) code from the book [flex & bison](http://shop.oreilly.com/product/9780596155988.do) by John Levine.
+
+The main [`configure.ac`](https://github.com/donny/finch/blob/master/configure.ac):
+
+```autoconf
+AC_PREREQ([2.69])
+AC_INIT([finch], [0.1], [info@example.com])
+AM_INIT_AUTOMAKE
+LT_PREREQ([2.4])
+LT_INIT([dlopen])
+
+AC_CONFIG_SRCDIR([src/parser.y])
+AC_CONFIG_HEADERS([config.h])
+
+# Checks for programs.
+AC_PROG_CC
+AC_PROG_LEX
+AC_PROG_YACC
+# AC_PROG_RANLIB
+
+# Checks for libraries.
+
+# Checks for header files.
+
+# Checks for typedefs, structures, and compiler characteristics.
+
+# Checks for library functions.
+
+AC_CONFIG_FILES([Makefile
+                 common/Makefile
+                 include/Makefile
+                 libfinch/Makefile
+                 src/Makefile])
+AC_OUTPUT
+```
+
+The main [`Makefile.am`](https://github.com/donny/finch/blob/master/Makefile.am):
+
+```make
+AUTOMAKE_OPTIONS = foreign
+SUBDIRS = common include libfinch src
+```
 
 ### Conclusion
 
