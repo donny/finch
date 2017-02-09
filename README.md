@@ -46,9 +46,22 @@ Notes:
 
 ### Project
 
-...
+To build the project using Autotools we need to run:
+
+```shell
+$ autoreconf -vi
+$ ./configure
+$ make
+$ make install
+```
+
+A recording that shows how to use the tools to build the project and run the program:
 
 [![asciicast](https://asciinema.org/a/eyrmftempszz5ad9n721kde4r.png)](https://asciinema.org/a/eyrmftempszz5ad9n721kde4r)
+
+The screenshot of the app:
+
+![Screenshot](https://raw.githubusercontent.com/donny/finch/master/screenshot.png)
 
 ### Implementation
 
@@ -102,3 +115,6 @@ SUBDIRS = common include libfinch src
 ### Conclusion
 
 ...
+
+- [Differences between .so and .dylib on macOS](http://stackoverflow.com/questions/2339679/what-are-the-differences-between-so-and-dylib-on-osx)
+-
