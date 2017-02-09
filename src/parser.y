@@ -44,7 +44,7 @@ int main()
 {
   printf("> ");
   yyparse();
-  finch_print_color("DONE");
+  finch_print_color(RED, "DONE");
   return 0;
 }
 

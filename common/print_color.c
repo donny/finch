@@ -15,28 +15,28 @@
 #define ANSI_COLOR_WHITE   "\x1b[37m"
 #define ANSI_COLOR_RESET   "\x1b[0m"
 
-void print_color(color c, char *msg)
+void print_color(f_color c, char *msg)
 {
   switch(c) {
-    case RED:
+    case F_RED:
       printf(ANSI_COLOR_RED "%s" ANSI_COLOR_RESET, msg);
       break;
-    case GREEN:
+    case F_GREEN:
       printf(ANSI_COLOR_GREEN "%s" ANSI_COLOR_RESET, msg);
       break;
-    case YELLOW:
+    case F_YELLOW:
       printf(ANSI_COLOR_YELLOW "%s" ANSI_COLOR_RESET, msg);
       break;
-    case BLUE:
+    case F_BLUE:
       printf(ANSI_COLOR_BLUE "%s" ANSI_COLOR_RESET, msg);
       break;
-    case MAGENTA:
+    case F_MAGENTA:
       printf(ANSI_COLOR_MAGENTA "%s" ANSI_COLOR_RESET, msg);
       break;
-    case CYAN:
+    case F_CYAN:
       printf(ANSI_COLOR_CYAN "%s" ANSI_COLOR_RESET, msg);
       break;
-    case WHITE:
+    case F_WHITE:
       printf(ANSI_COLOR_WHITE "%s" ANSI_COLOR_RESET, msg);
       break;
     default:

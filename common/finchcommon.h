@@ -3,15 +3,15 @@
 
 typedef enum
 {
-  RED,
-  GREEN,
-  YELLOW,
-  BLUE,
-  MAGENTA,
-  CYAN,
-  WHITE
-} color;
+  F_RED,
+  F_GREEN,
+  F_YELLOW,
+  F_BLUE,
+  F_MAGENTA,
+  F_CYAN,
+  F_WHITE
+} f_color;
 
-void print_color(color c, char *msg);
+void print_color(f_color c, char *msg);
 
 #endif /* FINCHCOMMON_H_INCLUDED */
