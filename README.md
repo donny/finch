@@ -108,7 +108,6 @@ SUBDIRS = common include libfinch src
 
 ### Conclusion
 
-...
+Autoconf, Automake, and Libtool are powerful tools to build a library or program for UNIX-like operating systems. They're complex and cater for a lot of system differences and peculiarities. For example, as a side note, the Mach-O object format as used by macOS [distinguishes](http://stackoverflow.com/questions/2339679/what-are-the-differences-between-so-and-dylib-on-osx) between shared libraries and dynamically loaded modules). The Autotools is still commonly used in Linux operating systems.
 
-- [Differences between .so and .dylib on macOS](http://stackoverflow.com/questions/2339679/what-are-the-differences-between-so-and-dylib-on-osx)
--
+I am looking forward to use this project as a build system template for future project: C programming in 2017; and using Flex and Bison.
